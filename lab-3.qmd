@@ -190,6 +190,27 @@ Requirements:
 The remaining questions in Part 1 require the use of the pivoted data frame from Question 4.
 :::
 
+```{r}
+# Question 4
+
+country_inflation_pivot <- country_inflation |>
+  pivot_longer(
+    cols = -country,
+    names_to = "year",
+    values_to = "annual_inflation",
+    names_transform = as.numeric
+  )
+
+country_inflation_pivot
+
+# Getting the exact data set dimensions:
+dim(country_inflation_pivot)
+
+```
+
+The new data set created from using pivot_longer has 1276 rows and 3 columns. Each rwo represents a country - year combination, with the columns country, year and annual_inflation. The year column was converted to a numeric variable using names_transform = as.numeric.
+
+
 ### Question 5
 
 Use a separate, single pipeline to answer each of the following questions.
