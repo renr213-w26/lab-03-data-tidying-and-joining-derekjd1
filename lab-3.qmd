@@ -309,6 +309,38 @@ Requirements for the plot:
 -   The plot should have an appropriate title (and optionally a subtitle).
 -   Plot should be customized in at least one way – you could use a different than default color scale, or different than default theme, or some other customization.
 
+
+```{r}
+# Question 7: Plotting
+
+ggplot(
+  inflation_of_countries |>
+    drop_na(annual_inflation),
+  aes(
+    x = year,
+    y = annual_inflation,
+    colour = country,
+    shape = country,
+    group = country
+  )
+) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 2) +
+  labs(
+    title = "Annual inflation rates for selected countries",
+    subtitle = "Canada, United States, France, Germany, and Japan (1993-2021)",
+    x = "Year",
+    y = "Annual inflation rate (%)",
+    color = "Country",
+    shape = "Country"
+  ) +
+  theme_minimal()
+
+```
+
+Observations:
+This is an interesting graph, these 5 countries seem to follow a relatively similar pattern but with all different values. For example they all initially have a drop in inflation % in the early 1990s, also around 2008-2009 there is a clear drop for all countries followed by a clear rise in 2009-2010. Also basically the United States has the highest inflation % consistently throughout and Japan has the lowest inflation throughout.
+
 ::: render-commit-push
 If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
 :::
