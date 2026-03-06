@@ -223,6 +223,30 @@ b.  What is the lowest inflation rate observed between 1993 and 2021? The output
 
 c.  Putting (a) and (b) together: What are the highest and the lowest inflation rates observed between 1993 and 2021? The output of the pipeline should be a data frame with two rows and three columns.
 
+```{r}
+# Question 5(a)
+country_inflation_pivot |>
+  filter(annual_inflation == max(annual_inflation, na.rm = TRUE))
+```
+From the dataset, the highest inflation rate between 1993 and 2021 was Brazil in 1994, the inflation value was a large 2075.888%.
+
+```{r}
+# Question 5(b)
+country_inflation_pivot |>
+  filter(annual_inflation == min(annual_inflation, na.rm = TRUE))
+```
+From the dataset, the lowest inflation rate between 1993 and 2021 was Ireland in 2009, the inflation value was at -4.478103%.
+
+```{r}
+country_inflation_pivot |>
+  filter(
+    annual_inflation == max(annual_inflation, na.rm = TRUE) |
+    annual_inflation == min(annual_inflation, na.rm = TRUE)
+)
+```
+
+The highest inflation rate between 1993 and 2021 was in Brazil in 199 with a value of 2075.89% and the lowest inflation rate between 1993 and 2021 occured in Ireland in 2009, with an inflation rate of around -4.48% 
+
 ### Question 6
 
 a\. Create a vector called `countries_of_interest` which contains the names of up tp five countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:
