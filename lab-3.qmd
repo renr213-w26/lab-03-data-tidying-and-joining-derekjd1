@@ -372,13 +372,27 @@ Let's load both of these files.
 
 us_inflation <- read_csv("data/us-inflation.csv")
 cpi_divisions <- read_csv("data/cpi-divisions.csv")
+
+
 ```
 
 ### Question 8
 
 a\. How many columns and how many rows does the `us_inflation` dataset have? What are the variables in it? Add a brief (1-2 sentences) narrative summarizing this information.
+```{r}
+# Question 8(a):
+glimpse(us_inflation)
+```
+Question 8(a):
+The us_inflation dataset has 132 rows and 4 columns. The dataset contains annual inflation rates for different CPI divisions in the United States for a given year, where each row represents a division and year combination and the columns are the country, cpi_division_id, year, and annual_inflation.
 
 b\. How many columns and how many rows does the `cpi_divisions` dataset have? What are the variables in it? Add a brief (1-2 sentences) narrative summarizing this information.
+```{r}
+# Question 8(b):
+glimpse(cpi_divisions)
+```
+Question 8(b):
+The cpi_division dataset has 12 rows and 2 columns. It contains the CPI division ID number and the corresponding descriptions for each CPI category.
 
 c\. Create a new dataset by joining the `us_inflation` dataset with the `cpi_division_id` dataset.
 
@@ -389,6 +403,17 @@ c\. Create a new dataset by joining the `us_inflation` dataset with the `cpi_div
 -   Use a short but informative name for the joined dataset, and do not overwrite either of the datasets that go into creating it.
 
 Then, find the number of rows and columns of the resulting dataset and report the names of its columns. Add a brief (1-2 sentences) narrative summarizing this information.
+
+```{r}
+# Question 8(c)
+us_inflation_joined <- us_inflation |>
+  left_join(cpi_divisions, by = c("cpi_division_id" = "id"))
+
+glimpse(us_inflation_joined)
+names(us_inflation_joined)
+```
+Question 8(c):
+The data sets were combined using a left join, this matches the cpi_division_id in the us_inflation dataset with id in the cpi_division dataset. The resulting dataset has 132 rows and 5 columns.The 5 column names are country, cpi_division_id, year, annual_inflation, and description.
 
 ### Question 9
 
