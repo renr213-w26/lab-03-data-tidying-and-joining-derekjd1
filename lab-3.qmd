@@ -487,6 +487,10 @@ ggplot(
   )
 ```
 
+Question 10:
+Observations from Graph:
+The inflation rates for Education, Housing, water, electricity and other fuels, and Food and non - Alcoholic beverages, Health are very consistent and remain stable throughout the years with just Food and Non-Alcoholic beverages dipping slightly but then coming back up. Transport is the most volatile will the largest swings and is not consistent with the other variables at all. 
+
 ::: render-commit-push
 If you haven't yet done so since Part 1, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
 :::
