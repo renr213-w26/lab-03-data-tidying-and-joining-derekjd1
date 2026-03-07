@@ -540,7 +540,7 @@ Important
 2 Brazil   1994          2076.  </code></pre>
 </div>
 </div>
-<p>The highest inflation rate between 1993 and 2021 was in Brazil in 199 with a value of 2075.89% and the lowest inflation rate between 1993 and 2021 occured in Ireland in 2009, with an inflation rate of around -4.48%</p>
+<p>The highest inflation rate between 1993 and 2021 was in Brazil in 1994 with a value of 2075.89% and the lowest inflation rate between 1993 and 2021 occured in Ireland in 2009, with an inflation rate of around -4.48%</p>
 </section>
 <section id="question-6" class="level3">
 <h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
@@ -757,7 +757,7 @@ Tip
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Question 9(a):</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co"># us_inflation_joined |&gt; distinct(description)</span></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>division_of_interest <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>divisions_of_interest <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Food and non-Alcoholic beverages"</span>,</span>
 <span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Housing, water, electricity, gas and other fuels"</span>,</span>
 <span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Transport"</span>,</span>
@@ -770,7 +770,7 @@ Tip
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Question 9(b):</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>divisions_selected <span class="ot">&lt;-</span> us_inflation_joined <span class="sc">|&gt;</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(description <span class="sc">%in%</span> division_of_interest)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(description <span class="sc">%in%</span> divisions_of_interest)</span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>divisions_selected <span class="sc">|&gt;</span></span>
 <span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(description)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>

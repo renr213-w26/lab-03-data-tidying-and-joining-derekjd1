@@ -245,7 +245,7 @@ country_inflation_pivot |>
 )
 ```
 
-The highest inflation rate between 1993 and 2021 was in Brazil in 199 with a value of 2075.89% and the lowest inflation rate between 1993 and 2021 occured in Ireland in 2009, with an inflation rate of around -4.48% 
+The highest inflation rate between 1993 and 2021 was in Brazil in 1994 with a value of 2075.89% and the lowest inflation rate between 1993 and 2021 occured in Ireland in 2009, with an inflation rate of around -4.48% 
 
 ### Question 6
 
@@ -427,7 +427,7 @@ Refer back to the guidance provided in [Question 6] if you're not sure how to cr
 # Question 9(a):
 # us_inflation_joined |> distinct(description)
 
-division_of_interest <- c(
+divisions_of_interest <- c(
   "Food and non-Alcoholic beverages",
   "Housing, water, electricity, gas and other fuels",
   "Transport",
@@ -443,7 +443,7 @@ b\. In a single pipeline, filter your reshaped dataset to include only the `divi
 ```{r}
 # Question 9(b):
 divisions_selected <- us_inflation_joined |>
-  filter(description %in% division_of_interest)
+  filter(description %in% divisions_of_interest)
 
 divisions_selected |>
   distinct(description)
